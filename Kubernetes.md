@@ -11,6 +11,9 @@
     |         Deployment        |
     |___________________________|
     ```
+
+## Pod 
+- In Kubernetes a pod is a throw away unit.
 ## Replicaset
 
 - A replica set ensure that a specific number of pods are running at all times.
@@ -31,4 +34,10 @@
     - Now one instance of new image is triggered.
     - Now slowly old replica set will be removed and simultaneously new pods are created.
     - This strategy is called rolling updates. 
-- 
+- Whenever a pod is deleted (`kubectl delete pod ''pod name`) everytime a new IP address is assigned.
+
+## Service.
+- The role of a service to provide an always available interface to the application which are running inside the pods.
+- Service is created when we expose the deployment. (`kubectl expose deployment 'deployment name' --type=LoadBalancer --port='port number'`)
+- `kubectl get services` lists the services running in our kubernetes environment.
+- Cluster IP service can only be acessed from inside the cluster
