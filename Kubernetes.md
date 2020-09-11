@@ -1,6 +1,6 @@
 # Kubernetes
 - The structure of kubernetes deployments.
-
+    ```
      pod  |   pod     pod  | pod
     ______________  ____________
     |             ||            | 
@@ -10,6 +10,7 @@
     |                           |
     |         Deployment        |
     |___________________________|
+    ```
 ## Replicaset
 
 - A replica set ensure that a specific number of pods are running at all times.
